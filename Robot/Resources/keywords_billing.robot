@@ -7,8 +7,8 @@
 
 #Insert Click Interactions Here
 Click MainMenu
-    Set Selenium Speed                           1
-    Click Element                                xpath://*[@id="app"]/div[5]/div[1]/nav/div/div[4]/div/button/div
+    Wait Until Page Contains Element             xpath://*[@id="app"]/div[4]/div[1]/nav/div/div[4]/div/button/div/span
+    Click Element                                xpath://*[@id="app"]/div[4]/div[1]/nav/div/div[4]/div/button/div/i
 
 Click MainMenu_Billing
     Click Element                                xpath: //*[contains(text(), "Billing")]
@@ -34,8 +34,9 @@ Input Card Name
 
 Input Card Number
     [Arguments]                                  ${search_term}
-    Click Element                                name:cardnumber
-    Input Text                                   name:cardnumber           ${search_term}
+    Click Element                                xpath://*[@id="card-element"]
+    Wait Until Page Contains Element             xpath://*[@id="card-element"]
+    Input Text                                   xpath://*[@id="card-element"]                                          ${search_term}
 
 Input MM/YY
     [Arguments]                                  ${search_term}
@@ -57,9 +58,12 @@ Open Card Panel && Verify Panel Loaded
     Click Card_Panel
     Verify Card_Panel_Opens
 
+
 Input Card Name, Number, MM/YY And CVC As TestObject 1
+    Set selenium speed              2
+    Set selenium timeout            10
     Input Card Name                 ${CARDNAME_1}
-    Input Card Number               ${TESTCARD_1_VISA}
+    Input Card Number               ${TEST_CARD_1_VISA}
     Input MM/YY                     0322
     Input CVC                       123
 
