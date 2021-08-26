@@ -9,6 +9,9 @@ ${URL_TITLE}				    Labelf
 ${URL_USERNAME_STEFAN}          stefan_nikolic@hotmail.com
 ${URL_PASSWORD_STEFAN}          iths123
 
+${URL_USERNAME_JONNA}          	jonna.hagberg@iths.se
+${URL_PASSWORD_JONNA}          	mjuk20
+
 ${CARDNAME_1}                   Stefan Nikolic
 ${CARDNAME_1}                   Greve Drakula
 ${CARDNAME_1}                   Tommy Skärgård
@@ -47,15 +50,15 @@ Login_Password
     Input Text                          id:password     ${search_term}
 
 Login-Session
-    Login_Email                         ${URL_USERNAME_STEFAN}
-    Login_Password                      ${URL_PASSWORD_STEFAN}
+    Login_Email                         ${URL_USERNAME_JONNA}
+    Login_Password                      ${URL_PASSWORD_JONNA}
     Click Element                       xpath://*[@id="app"]/div/main/div/div/div/div/div/div[2]/button/div
 
 Verify Page Loaded
     ${LINK_TEXT}                        Get Title
     Should Be Equal                     ${LINK_TEXT}      Labelf
-    Wait Until Page Contains Element    xpath://*[@id="app"]/div[5]/div[1]/nav/div/div[1]
-    Page Should Contain                 Labelf
+    Wait until page contains			Welcome! Please add some data
+    Page Should Contain                 It looks like you do not have any datasets in here.
 
 End Web Test
     Close Browser
