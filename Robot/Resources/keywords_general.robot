@@ -5,10 +5,11 @@
 ${BROWSER}                      chrome
 ${URL_LOGIN}                    https://stag.labelf.ai/login
 ${URL_HOMEPAGE}                 https://stag.labelf.ai/main/34/datasets/view
+${URL_BILLING}                  https://stag.labelf.ai/main/34/settings/billing
 ${URL_TITLE}				    Labelf
+
 ${URL_USERNAME_STEFAN}          stefan_nikolic@hotmail.com
 ${URL_PASSWORD_STEFAN}          iths123
-
 ${URL_USERNAME_JONNA}          	jonna.hagberg@iths.se
 ${URL_PASSWORD_JONNA}          	mjuk20
 
@@ -23,7 +24,6 @@ ${TEST_CARD_3_MASTERCARD}       5555555555554444
 
 
 #Pay in mind -> CVC Any 3 digit && Any future date works!
-
 
 *** Keywords ***
 Begin Web Test
@@ -50,8 +50,8 @@ Login_Password
     Input Text                          id:password     ${search_term}
 
 Login-Session
-    Login_Email                         ${URL_USERNAME_JONNA}
-    Login_Password                      ${URL_PASSWORD_JONNA}
+    Login_Email                         ${URL_USERNAME_STEFAN}
+    Login_Password                      ${URL_PASSWORD_STEFAN}
     Click Element                       xpath://*[@id="app"]/div/main/div/div/div/div/div/div[2]/button/div
 
 Verify Page Loaded
