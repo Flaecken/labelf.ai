@@ -47,7 +47,7 @@ Click Update Subsription On Update Dialog
 #Insert Verify Pages Here ---------------------------------------------------------------------------------------------
 
 Verify Billing Page Loaded
-    Wait Until Page Contains Element             xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[1]/div[1]/div/div[1]/h3
+    Wait Until Page Contains Element             xpath: //*[contains(text(), "Billing information")]
     Page Should Contain                          Billing information
 
 Verify Card_Panel_Opens
@@ -65,6 +65,11 @@ Verify New Dialog Paid Plan Options
 Verify If Subscription Has Been Updated
     Wait Until Page Contains Element             xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[1]/div[3]/div/div[1]
     Page Should Contain                          Subscription
+
+Verify Upcomming Invoice Box
+    Scroll Element Into View                     xpath: //*[contains(text(), "Upcomming invoices")]
+    Element Text Should Be                       xpath: //*[contains(text(), "Upcomming invoices")]             Upcomming invoices
+    Sleep                                        2
 
 #Input Interactions Here ---------------------------------------------------------------------------------------------
 
