@@ -14,8 +14,7 @@ User can add billing information
         [Tags]                          Billing
 
         Go to Web Page
-        Go to Billings Page - http address
-        Verify Billing Page Loaded
+        Navigate to Billing Page && Verify Page Loaded
         Update all Billing information
 
 

@@ -8,7 +8,7 @@
 #Insert Click Interactions Here ----------------------------------------------------------------------------------------
 
 Click MainMenu
-    Set selenium speed                           1
+    Set selenium speed                           0.1
     Wait Until Page Contains Element             xpath://*[@id="app"]/div[4]/div[1]/nav/div/div[4]/div/button/div/span
     Click Element                                xpath://*[@id="app"]/div[4]/div[1]/nav/div/div[4]/div/button/div/i
 
