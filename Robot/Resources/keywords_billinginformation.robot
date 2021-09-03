@@ -32,6 +32,7 @@ Update all Billing information
 	Add Postal Code
 	Add City
 	Add Country
+	Add VAT number
 	Click element				xpath://*[@id="app"]/div[5]/div/div/div/button/div
 
 # Add all information -------------------------------------------
@@ -46,17 +47,43 @@ Add City
 	Input text					xpath://*[@id="app"]/div[5]/div/div/div/form/div[7]/div/div[1]/div/input		${CITY_1}
 
 Add Country
-	Sleep						1 s
-	#Click element				xpath://*[@id="app"]/div[5]/div/div/div/form/div[8]/div/div[1]/div[1]/div[1]
 	Click Element               class:v-select__selections
-	Scroll Element Into View    xpath: //*[contains(text(), "Sweden")]
-	#Scroll Element Into View    xpath: //*[@id="app"]/div[1]/div/div
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[20]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[40]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[60]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[80]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[100]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[120]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[140]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[160]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[180]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[200]/a
+
+	Click Element               class:v-select__selections
+	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[209]/a
+
 	#Select from list by label	listitem		${COUNTRY_1}
-	#Click Element               xpath://*[@id="app"]/div[1]/div/div/div[20]/a
-	Click element				class:v-list__tile__title
+	#Click element				class:v-list__tile__title
 	#Click element    			xpath: //*[contains(text(), "Sweden")]
 	#Select from list by index	class:v-list__tile__title		209
-	Sleep						1 s
 
 
 Add Address Line 1
