@@ -16,5 +16,6 @@ User can add billing information
         Go to Web Page
         Navigate to Billing Page && Verify Page Loaded
         Update all Billing information
+		Verify updated information
 
 
