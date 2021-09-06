@@ -6,8 +6,12 @@ Test Setup          Begin Web Test
 Test Teardown       End Web Test
 
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
+
+Happy path labelf staging login
+    Go to Web Page
+    Go to Profile and Confirm Details
+    Logout and Confirm
 
 
-*** Keywords ***
+
+

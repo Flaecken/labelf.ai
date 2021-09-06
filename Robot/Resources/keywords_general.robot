@@ -52,8 +52,8 @@ Login_Password
     Input Text                          id:password     ${search_term}
 
 Login-Session
-    Login_Email                         ${URL_USERNAME_STEFAN}
-    Login_Password                      ${URL_PASSWORD_STEFAN}
+    Login_Email                         ${URL_USERNAME_JOLIN}
+    Login_Password                      ${URL_PASSWORD_JOLIN}
     Click Element                       xpath://*[@id="app"]/div/main/div/div/div/div/div/div[2]/button/div
 
 Verify Page Loaded
@@ -61,6 +61,22 @@ Verify Page Loaded
     Should Be Equal                     ${LINK_TEXT}      Labelf
     Wait until page contains			Welcome! Please add some data
     Page Should Contain                 It looks like you do not have any datasets in here.
+
+Go to Profile and Confirm Details
+    wait until page contains element    xpath://html/body/div[1]/div/div[4]/div[1]/nav/div/div[5]/div/button
+    click button                        xpath://html/body/div[1]/div/div[4]/div[1]/nav/div/div[5]/div/button
+    wait until page contains            ${URL_USERNAME_JOLIN}
+    click element                       xpath://*[@id="app"]/div[3]/div/div[1]/div[2]/a
+    wait until page contains            User Profile
+    page should contain                 ${URL_USERNAME_JOLIN}
+
+Logout and Confirm
+    wait until page contains element    xpath://html/body/div[1]/div/div[3]/div[1]/nav/div/div[5]/div/button
+    click button                        xpath://html/body/div[1]/div/div[3]/div[1]/nav/div/div[5]/div/button
+    wait until page contains            Logout
+    click element                       xpath://*[@id="app"]/div[2]/div/div[3]/div/a/div[1]/div
+    wait until page contains            Logged out
+
 
 End Web Test
     Close Browser
