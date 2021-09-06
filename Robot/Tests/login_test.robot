@@ -8,7 +8,7 @@ Test Teardown       End Web Test
 *** Test Cases ***
 
 Happy path labelf staging login
-    [Tags]      LT-139
+    [Tags]      LT1-139
     Go to Web Page
     Go to Profile and Confirm Details
     Logout and Confirm
