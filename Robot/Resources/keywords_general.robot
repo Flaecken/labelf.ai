@@ -12,6 +12,8 @@ ${URL_USERNAME_STEFAN}          stefan_nikolic@hotmail.com
 ${URL_PASSWORD_STEFAN}          iths123
 ${URL_USERNAME_JONNA}          	jonna.hagberg@iths.se
 ${URL_PASSWORD_JONNA}          	mjuk20
+${URL_USERNAME_JOLIN}           jolin.franzke@iths.se
+${URL_PASSWORD_JOLIN}           mjuk20
 
 ${CARDNAME_1}                   Stefan Nikolic
 ${CARDNAME_1}                   Greve Drakula
