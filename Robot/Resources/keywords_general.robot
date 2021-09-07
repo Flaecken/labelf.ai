@@ -9,11 +9,9 @@ ${URL_BILLING}                  https://stag.labelf.ai/main/34/settings/billing
 ${URL_TITLE}				    Labelf
 
 ${URL_USERNAME_STEFAN}          stefan_nikolic@hotmail.com
-${URL_PASSWORD_STEFAN}          iths123
+${URL_PASSWORD_STEFAN}          ITHS123
 ${URL_USERNAME_JONNA}          	jonna.hagberg@iths.se
 ${URL_PASSWORD_JONNA}          	mjuk20
-${URL_USERNAME_JOLIN}           jolin.franzke@iths.se
-${URL_PASSWORD_JOLIN}           mjuk20
 
 ${CARDNAME_1}                   Stefan Nikolic
 ${CARDNAME_1}                   Greve Drakula
@@ -52,8 +50,8 @@ Login_Password
     Input Text                          id:password     ${search_term}
 
 Login-Session
-    Login_Email                         ${URL_USERNAME_JOLIN}
-    Login_Password                      ${URL_PASSWORD_JOLIN}
+    Login_Email                         ${URL_USERNAME_STEFAN}
+    Login_Password                      ${URL_PASSWORD_STEFAN}
     Click Element                       xpath://*[@id="app"]/div/main/div/div/div/div/div/div[2]/button/div
 
 Verify Page Loaded
@@ -65,10 +63,10 @@ Verify Page Loaded
 Go to Profile and Confirm Details
     wait until page contains element    xpath://html/body/div[1]/div/div[4]/div[1]/nav/div/div[5]/div/button
     click button                        xpath://html/body/div[1]/div/div[4]/div[1]/nav/div/div[5]/div/button
-    wait until page contains            ${URL_USERNAME_JOLIN}
+    wait until page contains            ${URL_USERNAME_STEFAN}
     click element                       xpath://*[@id="app"]/div[3]/div/div[1]/div[2]/a
     wait until page contains            User Profile
-    page should contain                 ${URL_USERNAME_JOLIN}
+    page should contain                 ${URL_USERNAME_STEFAN}
 
 Logout and Confirm
     wait until page contains element    xpath://html/body/div[1]/div/div[3]/div[1]/nav/div/div[5]/div/button
