@@ -97,6 +97,7 @@ Add VAT number
 
 Verify updated information
     Wait until page contains        Finalized invoices
+    Reload page
 	Verify Company Name
 	Verify E-mail
 	Verify City
@@ -142,5 +143,5 @@ Verify Country
 
 Verify VAT number
 	${get_vat_number}			Get text		xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[2]/div[1]/div/div[2]/div[9]/div/div[2]
-	Should be equal				${get_vat_number}		verifying
+	Should be equal				${get_vat_number}		${VAT_NUMBER_1}
 
