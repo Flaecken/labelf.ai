@@ -66,6 +66,7 @@ Add Country
 	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[40]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[40]/a
 
+	Sleep						1 s
 	Click Element               class:v-select__selections
 	Sleep						1 s
 	#Wait until page contains element		xpath://*[@id="app"]/div[1]/div/div/div[60]/a
