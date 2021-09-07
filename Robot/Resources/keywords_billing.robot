@@ -44,6 +44,18 @@ Click Subscription_Option_ThirdPaidPlan On Update Dialog
 Click Update Subsription On Update Dialog
     Click Element                                xpath://*[@id="app"]/div[2]/div/div/div/div/button/div
 
+Click Browser History In Finalized Invoices
+    Set selenium speed                           1
+    Wait Until Page Contains Element             xpath: //*[contains(text(), "Finalized invoices")]
+    Click Element                                xpath: //*[contains(text(), "Browse payment history")]
+    Click Element                                xpath: //*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[1]/div[5]/div/div[2]/div[2]/ul/li/div[2]/div/div/div/div/div/div[1]/div[1]/div/div/div
+    Scroll Element Into View                     xpath: //*[contains(text(), "Link to PDF")]
+    Click Element                                xpath: //*[contains(text(), "Link to PDF")]
+    Sleep                                        3
+
+Click View Invoice Details
+    Click Element                                xpath: //*[contains(text(), "View invoice details")]
+
 #Insert Verify Pages Here ---------------------------------------------------------------------------------------------
 
 Verify Billing Page Loaded
@@ -66,10 +78,22 @@ Verify If Subscription Has Been Updated
     Wait Until Page Contains Element             xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[1]/div[3]/div/div[1]
     Page Should Contain                          Subscription
 
-Verify Upcomming Invoice Box
+Verify Upcomming And Finalize Invoice Box
     Scroll Element Into View                     xpath: //*[contains(text(), "Upcomming invoices")]
     Element Text Should Be                       xpath: //*[contains(text(), "Upcomming invoices")]             Upcomming invoices
-    Sleep                                        2
+    Sleep                                        1
+    Scroll Element Into View                     xpath: //*[contains(text(), "Finalized invoices")]
+    Element Text Should Be                       xpath: //*[contains(text(), "Finalized invoices")]             Finalized invoices
+
+Verify Invoice Page Loaded
+    ${LINK_TEXT}                        Get Title
+    Should Be Equal                     ${LINK_TEXT}      Pay Labelf AI Invoice #S-0005
+    Wait Until Page Contains Element    xpath: //*[@id="root"]/div/div[1]/div/div[3]/div[1]/div/div[2]/table
+    Wait until page contains			S-0005
+
+Verify Summary in View Invoice Details
+    Wait Until Page Contains Element             xpath: //*[contains(text(), "Summary")]
+    Page Should Contain                          Items
 
 #Input Interactions Here ---------------------------------------------------------------------------------------------
 
@@ -85,8 +109,6 @@ Remove the Subscription && Verify Update
     Click Element                                xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[1]/div[3]/div/div[2]/div/button[2]/div
     Wait Until Page Contains Element             xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[1]/div[3]/div/div[2]/div/button[1]/div
     Sleep                                        2
-
-
 
 #Refactorisation - Feel free to combine keywords - Make Sure to Make Understandable Refactorisations ------------------------------------------------------
 
@@ -119,3 +141,7 @@ Chose Third Paid Plan && Click Update
 Click Update Subscription && Verify Dialog Opens
     Click Update Subscription
     Verify New Dialog Paid Plan Options
+
+Click View Invoice Details && Verify Details Loaded
+    Click View Invoice Details
+    Verify Summary in View Invoice Details
