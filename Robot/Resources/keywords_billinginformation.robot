@@ -57,7 +57,7 @@ Add City
 	Input text					xpath://*[@id="app"]/div[5]/div/div/div/form/div[7]/div/div[1]/div/input		${CITY_1}
 
 Add Country
-	#Set selenium speed			0.7 s
+	Set selenium speed			0.5 s
 	Click Element               class:v-select__selections
 	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[20]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[20]/a
