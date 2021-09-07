@@ -59,47 +59,48 @@ Add City
 Add Country
 	Set selenium speed			0.5 s
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[20]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[20]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[20]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[40]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[40]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[40]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element	xpath://*[@id="app"]/div[1]/div/div/div[60]/a
+	Sleep						1 s
+	#Wait until page contains element		xpath://*[@id="app"]/div[1]/div/div/div[60]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[60]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[80]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[80]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[80]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[100]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[100]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[100]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[120]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[120]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[120]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[140]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[140]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[140]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[160]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[160]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[160]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[180]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[180]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[180]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[200]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[200]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[200]/a
 
 	Click Element               class:v-select__selections
-	Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[209]/a
+	#Wait until page contains element               xpath://*[@id="app"]/div[1]/div/div/div[209]/a
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[209]/a
 
 	#Select from list by label	listitem		${COUNTRY_1}
