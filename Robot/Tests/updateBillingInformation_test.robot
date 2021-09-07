@@ -11,9 +11,9 @@ Test Teardown                      End Web Test
 
 User can add billing information
         [Documentation]                 Billing
-        [Tags]                          Billing
+        [Tags]                          Billing		LT1-20
 
-        Go to Web Page
+        Go to Web Page for Billing information
         Navigate to Billing Page && Verify Page Loaded
         Update all Billing information
 		Verify updated information

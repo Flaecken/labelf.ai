@@ -1,4 +1,6 @@
 *** Settings ***
+Resource                           keywords_general.robot
+Resource                           keywords_billing.robot
 
 *** Variables ***
 
@@ -21,8 +23,14 @@ ${VAT_NUMBER_1}						SE543210123401
 
 # Update Billing information -------------------------------------------
 
+Go to Web Page for Billing information
+	Load Page
+	Login_Email                         ${URL_USERNAME_JONNA}
+	Login_Password                      ${URL_PASSWORD_JONNA}
+	Click Element                       xpath://*[@id="app"]/div/main/div/div/div/div/div/div[2]/button/div
+
 Click Update Billing information
-	Click element				xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[2]/div[1]/div/div[3]/button/div
+	Click element						xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[2]/div[1]/div/div[3]/button/div
 
 Update all Billing information
 	Click Update Billing information
@@ -49,6 +57,7 @@ Add City
 	Input text					xpath://*[@id="app"]/div[5]/div/div/div/form/div[7]/div/div[1]/div/input		${CITY_1}
 
 Add Country
+	Set selenium speed			0.5 s
 	Click Element               class:v-select__selections
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[20]/a
 
@@ -61,7 +70,6 @@ Add Country
 	Click Element               class:v-select__selections
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[80]/a
 
-	Set selenium speed			0.5 s
 	Click Element               class:v-select__selections
 	Click Element               xpath://*[@id="app"]/div[1]/div/div/div[100]/a
 
