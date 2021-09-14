@@ -1,3 +1,6 @@
+![Labelf](https://github.com/AdamBallard/labelf.ai/blob/master/Images/Labelf_logo_horizontal_dark.png)
+
+
 # 				Quick guide för Group 1 Project
 
 ##	 				Innehållsförteckning 
@@ -66,32 +69,125 @@ sparat i en fil på den lokala datorn och Jenkins talar om dess sökväg.
 6. Notera att Jenkins skapar en katalog, .jenkins, i vilken systemet sparar konfiguration av sig
 själv och jobb, plugins samt resultat av varje bygge.
 
+#####				Skapa din pipeline - settings 
 
-När du loggat in väljer du att Skapa nytt item. Namnge den och välj Pipeline och tryck OK.
 
-Konfigurera pipelinen genom att checka följande boxar: 
-* GitHub Project
-* GitHub hook trigger for GITScm polling
+1. När du loggat in väljer du att Skapa nytt item. Namnge den, välj "Pipeline" i alternativen under och tryck OK.
 
-Fyll i github länken under Project URL
+2. Konfigurera pipelinen genom att checka följande boxar: 
+	* GitHub Project
+	* GitHub hook trigger for GITScm polling
 
-Under pipeline välj definitionen - Pipeline script from SCM
+3. Fyll i github länken under Project URL
 
-Fyll in github repots URL igen.
+4. Under pipeline välj definitionen - Pipeline script from SCM
 
-Fyll i "Branch Specifier", vilken branch du vill bygga ifrån. I vårt fall är detta Robot_WIP. 
+5. Fyll in github repots URL igen.
 
-Kontrollera att Script Path är Jenkinsfile - viktigt att den har samma namn som filen på github repot. 
+6. Fyll i "Branch Specifier", vilken branch du vill bygga ifrån. I vårt fall är detta Robot_WIP. 
+   Kontrollera att Script Path är Jenkinsfile - viktigt att den har samma namn som filen på github repot. 
 
-Tyck på Spara.
-
-Nu är din Pipeline färdig. 
+7. Tyck på Spara.
 
 
 
 ### 				Robot Framework + Selenium
 
+####				Installation
+#####				PyCharm
+* Ladda ner installationsfilen här: https://www.jetbrains.com/pycharm/download/
+* Kör installeraren och följ stegen.
+* Öppna programmet, klicka på Configure.
+* Klicka på Plugins och skriv in IntelliBot i sökrutan.
+* Välj den plugin som heter IntelliBot @SeleniumLibrary Patched och klicka på Install.
+* Installera även de plugins som heter Robot Framework Support och Run Robot FrameWork TestCase.
+* Starta om PyCharm.
+#####				Python
+
+* OBS! Det finns inte längre support för Python 2, du ska därför använda Python 3.
+* Om du redan har Python 3 installerat på datorn kan du hoppa över dessa steg.
+* Om du inte redan har Python 3 ska du börja med att skapa en mapp som heter Python i din hemmapp:
+  exempel C:\Users\user\Python\
+* Ladda ner senaste versionen av Python 3 här: https://www.python.org/downloads/
+* Kör installeraren och följ stegen. Ange den nyligen skapade Python-mappen när du under
+  installationen (Advanced Options) får frågan var du vill spara programmet.
+* Lägg till sökvägen till mappen och till undermappen Scripts som miljövariabler i din PATH:
+  exempel C:\Users\user\Python\
+  exempel C:\Users\user\Python\Scripts\
+* Öppna en kommandotolk och kör följande kommando:
+  python --version
+* Om programmet har installerats korrekt får du ett resultat som liknar detta (beroende på
+  vilken version du installerade):
+  Python 3.8.1
+  Robot Framework
+* Ladda ner Robot Framework via kommandotolken med följande kommando:
+  pip install robotframework
+* Om du får felmeddelandet “‘pip’ is not recognized as an internal or external command” finns
+  en manual här. Annars går du vidare till nästa steg.
+* Robot Framework kommer nu installeras på samma plats som Python. Du behöver därför
+  inte lägga till någon miljövariabel eftersom du redan lagt till de sökvägar som behövs när du
+  installerade Python.
+* Kontrollera att programmet har installerats med hjälp av följande kommando:
+  robot --version
+* Om programmet har installerats korrekt får du ett resultat som liknar detta (beroende på
+  vilken version du installerade):
+  Robot Framework 3.1.2 (Python 3.8.1 on win32)
+* Installera Seleniumbiblioteket för Robot Framework. OBS! Installera INTE biblioteket med
+  namnet Selenium2Library då det har fasats ut. Använd följande kommando i
+  kommandotolken:
+  pip install robotframework-seleniumlibrary
+  
+  
+#####				Webdriver
+* Skapa en mapp som heter Webdriver i din hemmapp:
+  exempel C:\Users\user\Webdriver\
+* Öppna Chrome och kontrollera din version genom att gå till följande sida:
+  chrome://settings/help
+* Ladda ner webdriver till den Chrome-version du använder på följande webbsida:
+  https://chromedriver.chromium.org/downloads
+* OBS! Du måste först packa upp filen och sedan spara den i Webdriver-mappen.
+* Lägg till sökvägen till mappen som miljövariabel i din PATH:
+  exempel C:\Users\user\Webdriver\
+
+####				Setup PyCharm Continuous Integration
+
+* Starta ett nytt project 
+* Klicka på VCS i navigationsraden högst upp och välja "Get from Version Control"
+* Fyll i Repository URL
+* Välj Lokal plats & klicka "Clone"
 
 
 ### 				GitHub
+
+
+####				Branches
+
+Syftet med Master branchen är slutstation för samtliga filer. Filer som blivit granskade och anses vara förtillfället färdiga. 
+
+Robot_WIP har fungerat som ett mellan stop för icke-kontrollerad eller pågående arbete. Där alla kan tillgå varandras aktuella arbetsuppgifter.
+
+
+
+####				Filer & Mappar
+
+* Robot
+	Innehåller samtliga filer relevanta för automatiserade tester.
+	1) Tests     - Testfallen
+	2) Resourses - Keywords filer
+
+* Utforskande tester 
+	Innehåller information om samtliga testfall & mer detailerad information om utförda utforskande tester.
+
+* Jenkinsfile
+	Script för pipeline till Jenkins
+
+* .gitignore
+	Filer som vår git inte ska klona ifrån våra commits. 
+	Vi har valt Results filen som skapas vid PyCharm exkivering
+
+* README.md 
+	Samtlig relevant information för någon som ska ta över projektet.
+
+
+
 
