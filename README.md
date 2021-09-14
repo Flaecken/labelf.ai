@@ -20,9 +20,9 @@
 
 I GitHub finner ni våra automatiserade Robot Framework test tillsammans med Jenkinsfile. Robot_WIP har varit dit all kod pushats oavsett om den anses färdig eller inte. När koden gått grönt i Jenkins och blivit checkad av kollega har den pushats till Master. 
 
-De utforskande testfallen finns i excel-dokumentet på länken:[Testfall Grupp 1](https://ithogskolan-my.sharepoint.com/:x:/r/personal/jonna_hagberg_iths_se/_layouts/15/Doc.aspx?sourcedoc=%7B03dbe5f4-9c40-44e8-8cf0-08b4a3dabb2f%7D&action=edit&activeCell=%27Lista%20%C3%B6ver%20tester%27!K43&wdinitialsession=69a1aaa7-1edf-4e75-a1c9-d7d4442b8cbc&wdrldsc=5&wdrldc=1&wdrldr=AccessTokenExpiredWarning%2CRefreshingExpiredAccessT)
+De utforskande testfallen finns i excel-dokumentet på länken: [Testfall Grupp 1](https://ithogskolan-my.sharepoint.com/:x:/r/personal/jonna_hagberg_iths_se/_layouts/15/Doc.aspx?sourcedoc=%7B03dbe5f4-9c40-44e8-8cf0-08b4a3dabb2f%7D&action=edit&activeCell=%27Lista%20%C3%B6ver%20tester%27!K43&wdinitialsession=69a1aaa7-1edf-4e75-a1c9-d7d4442b8cbc&wdrldsc=5&wdrldc=1&wdrldr=AccessTokenExpiredWarning%2CRefreshingExpiredAccessT) De finns även här på Github i mappen Utforskande tester.
 
-Samtliga buggar/ärenden finns dokumenterade i sin helhet på Jira:[Jira](https://jofr.atlassian.net/jira/software/projects/LT1/boards/3/roadmap)
+Samtliga buggar/ärenden finns dokumenterade i sin helhet på Jira: [Jira](https://jofr.atlassian.net/jira/software/projects/LT1/boards/3/roadmap)
 
 Samtliga buggar finns dokumenterade i korthet i excel-dokumentet på länken: [Samlings dokument för buggar](https://docs.google.com/spreadsheets/d/17-tFI6LilWOn7rt_VXN7V-F64qXNBCl6ifn6tzZ0KCc/edit#gid=0)
 
@@ -31,9 +31,9 @@ Samtliga buggar finns dokumenterade i korthet i excel-dokumentet på länken: [S
 
 ###					Testmiljö
 
-Samtliga testfall är utförda på staging miljön:[Stage miljö](https://stag.labelf.ai/)
+Samtliga testfall är utförda på staging miljön: [Stage miljö](https://stag.labelf.ai/)
 
-Skapandet av konton sker via länken:[Registrerings länk](https://stag.labelf.ai/register/it-hogskolan)
+Skapandet av konton sker via länken: [Registrerings länk](https://stag.labelf.ai/register/it-hogskolan)
 Länken angavs av Labelf - Kontakta kund för åtkomst. 
 
 
